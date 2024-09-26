@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>javaScrip</title>
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+</head>
+<body>
+	<header></header>
+	<nav id="barra">
+		<ul id="menu">
+			<li><a id="pagina_activa" href="../index.html">Inicio</a></li>
+			<li><a href="#">Condicional</a>
+				<ul class="submenu">
+					<li><a href="../condicionales/simple.html">Simple</a></li>
+					<li><a href="../condicionales/multiple.html">Multiple</a></li>
+				  <li><a href="../condicionales/puedes.html">Puedes votar?</a></li>
+					<li>&nbsp;</li>
+                </ul>
+			</li>
+			<li><a href="#">&nbsp; &nbsp; &nbsp; &nbsp;Ciclos &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
+				<ul class="submenu">
+					<li><a href="../ciclos/paresfor.html">Pares 1-100 con for</a></li>
+					<li><a href="../ciclos/pareswhile.html">Pares 1-100 con while</a></li>
+					<li><a href="../ciclos/paresdo.html">Pares 1-100 con<br>do-while</a></li>
+					<li><a href="../ciclos/sumatoriafor.html">Sumatoria 1-100 con for</a></li>
+					<li><a href="../ciclos/sumatoriawhile.html">Sumatoria 1-100 con while</a></li>
+					<li><a href="../ciclos/sumatoriado.html">Sumatoria 1-100 con do-while</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Algoritmo de ordenamiento</a>
+				<ul class="submenu">
+					<li><a href="../Arreglos/bubble.html">Bubble sort</a></li>
+					<li><a href="../Arreglos/insertion.html">Insertion sort</a></li>
+					<li><a href="../Arreglos/selection.html">Selection sort</a></li>
+			  </ul>
+</li>
+			<li><a href="#">Operadores Base</a>
+				<ul class="submenu">
+					<li><a href="../operacionesbase/paresimpares.html">Pares o Impares</a></li>
+					<li><a href="../operacionesbase/tablas.html">Tabla de multiplicar</a></li>
+					<li><a href="../operacionesbase/media.html">Media de 3 numeros</a></li>
+					<li><a href="../operacionesbase/nummayor.html">Posicion del numero mayor de un arreglo</a></li>
+					<li><a href="../operacionesbase/operaciontexto.html">Operacion con texto</a></li>
+					<li><a href="../operacionesbase/orden.html">Ordenamiento de numeros</a></li>
+					<li><a href="../operacionesbase/procsuma.html">Producto de 2 numeros</a></li>
+					<li><a href="../operacionesbase/sumaareglos.html">Suma de 2 Arreglos</a></li>
+				</ul>
+			</li>
+	</nav>
+	<div>
+	<section>
+		<article>
+			<hr>
+			<h2>Insertion Sort</h2>
+			<hr>
+		</article>
+		<article>
+			<hr>
+			<script type="text/javascript">
+               function insertionSort(inputArr) {
+                let n = inputArr.length;
+                for (let i = 1; i < n; i++) {
+                    let current = inputArr[i];
+                    let j = i-1; 
+                        while ((j > -1) && (current < inputArr[j])) {
+                            inputArr[j+1] = inputArr[j];
+                            j--;
+                        }
+            	inputArr[j+1] = current;
+            	}
+    			return inputArr;
+				}
+				function rellenar(matriz)
+                {
+                    var largo, valor, ind;
+                    largo = matriz.length;
+                    for(ind = 0; ind < largo; ind++)
+                        {
+                            valor = Math.random()*20;
+                            matriz[ind] = Math.round(valor);
+                        }
+                }
+				var lista=new Array(10);
+				rellenar(lista);
+				document.write("De la lista  "+lista);
+    			document.write("  se ordenaron: "+insertionSort(lista));
+
+                </script>
+		</article>
+	</section>
+	</div>
+	<footer>
+	</footer>
+
+</body>
+</html>
